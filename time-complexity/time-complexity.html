@@ -74,20 +74,43 @@
         </div>
       </div>
     </nav>
-    <h1>Tech Learning for beginner.</h1>
-    <span>Things to learn during this course </span>
-    <ol>
-      <li>
-        <a href="time-complexity/time-complexity.html"
-          >Time & Sapce Complexity</a
-        >
-      </li>
-      <li><a href="patterns/patterns.html">Patterns</a></li>
-    </ol>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
+    <h1>Time complexity-</h1>
+    <div>
+      Rate at which time taken increases with respect to the input size.
+    </div>
+    <span>Time complexity != time taken</span>
+
+    <h2>Big Oh Notation - O(n) - Worst case - Upper bonud</h2>
+
+    <h3>Rules</h3>
+    <ul>
+      <li>Worst case scenario</li>
+      <li>Avoid constants</li>
+      <li>Avoid lower values</li>
+    </ul>
+    <h2>Theta Notation - θ(n) - Average case</h2>
+    <h2>Omega Notation - Ω(n) - Best Case: Lower bonud</h2>
+
+    <h1>Space Complexity - Memory Space</h1>
+    <div>
+      <div>Big Oh Notation - O(n) => Auxilary space + Input space</div>
+      <div>Auxilary space - The space that you take to solve the problem.</div>
+      <div>Input space - The space that you take to store the input.</div>
+
+      <code> function(int []input) { int c = 12; ... } </code>
+      <span> Here input array is a input Space c is Auxilary space </span>
+      <span
+        >Never ever change input data inside the function, untill you are asked
+        to do so.</span
+      >
+    </div>
+    <br />
+    <br />
+    <div>
+      Video Lecture by Striver
+      <a href="https://www.youtube.com/watch?v=FPu9Uld7W-E" target="_blank">
+        Time & space complexity Video</a
+      >
+    </div>
   </body>
 </html>
