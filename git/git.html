@@ -1,0 +1,329 @@
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <style>
+        ul {
+            font-family: sans-serif;
+            -webkit-text-size-adjust: 100%;
+            font-size: 16px;
+            white-space: pre-line;
+            word-wrap: break-word;
+            box-sizing: border-box;
+            margin-top: 0;
+            margin-bottom: 0;
+            list-style-type: square;
+            margin-left: 0;
+            margin-right: 0;
+            padding: 0;
+        }
+
+        li {
+            -webkit-text-size-adjust: 100%;
+            white-space: pre-line;
+            word-wrap: break-word;
+            list-style-type: square;
+            direction: ltr;
+            unicode-bidi: isolate;
+            box-sizing: border-box;
+            font-variant-ligatures: none;
+            outline: none;
+            position: relative;
+            text-decoration: inherit;
+            font-style: inherit;
+            color: rgba(33, 33, 33, 1);
+            font-family: Merriweather, serif;
+            font-size: 11pt;
+            font-weight: 400;
+            margin: 6px 0 0 0;
+            margin-top: 0;
+            padding-top: 0;
+            line-height: 0;
+            margin-left: 15pt;
+        }
+
+        span {
+            -webkit-text-size-adjust: 100%;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            list-style-type: square;
+            font-style: inherit;
+            color: rgba(33, 33, 33, 1);
+            line-height: 1.6667;
+            text-indent: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto Mono';
+            font-size: 13pt;
+            font-variant: normal;
+            font-weight: normal;
+            vertical-align: baseline;
+        }
+
+        h6 {
+            -webkit-text-size-adjust: 100%;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-variant-ligatures: none;
+            font-style: inherit;
+            color: rgba(33, 33, 33, 1);
+            font-size: 11pt;
+            line-height: 1.6667;
+            font-family: 'Merriweather';
+            font-weight: bold;
+            -webkit-font-smoothing: antialiased;
+            box-sizing: border-box;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="https://tech-learning-xi.vercel.app">Tech Learning</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span></li>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">
+                        Search
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div>
+        <h3>Git Commands</h3>
+        <h6>Remote Repository Servers</h6>
+
+        <ul>
+            <li>Github</li>
+            <li>BitBucket</li>
+            <li>AWS Code commit</li>
+            <li>GitLab</li>
+        </ul>
+    </div>
+    <h6>Set Remote Repository</h6>
+    <li><span> git remote add origin <https: //github.com/your/repository></span></li>
+    <h6>Resetting remote repository</h6>
+    <li><span>git remote set-url origin <https: //github.com/your/repository></span></li>
+
+    <h6>Git configuration</h6>
+
+    <h6>Set Global configuration</h6>
+    <li><span>git config --global user.name "FIRST_NAME LAST_NAME"</span></li>
+    <li><span>git config --global user.email "MY_NAME@example.com"</span></li>
+
+    <h6>View global configuration</h6>
+    <li><span>vi ~/.gitconfig</span></li>
+
+    <h6>Set Repository specific configuration (execute commands from repository directory)</h6>
+
+    <li><span>git config user.name "FIRST_NAME LAST_NAME"</span></li>
+    
+    <li><span> git config user.email "MY_NAME@example.com"</span></li>
+    <h6>View repository specific configuration</h6>
+
+    <li><span>git config -l</span></li>
+
+    <h5>Branch commands</h5> <h6> Command to create branch and does not switch to the created branch, but remain in the current branch.</h6>
+    <li><span>git branch <Branch Name></span></li>
+
+    <h6>Create branch and switch to the created branch</h6>
+    <li><span>git checkout -b <Branch Name>
+                <From branch name></span></li>
+
+    <h6>Switch to the previous branch</h6>
+    <li><span>git checkout -</span></li>
+
+    <h6>Push a branch to remote repository</h6>
+    <li><span> git push --set-upstream origin <New Branch Name></span></li>
+    
+    <li><span>OR</span></li>
+    
+    <li><span>git push -u origin <New Branch Name></span></li>
+    <h6>Push first time after setting remote URL - When there are no earlier commits (Not added .gitignore / Readme.md files in remote repository)</h6>
+    <li><span>git remote add origin <https: //github.com/your/repository></span></li>
+    <li><span>git pull origin master</span></li>
+    <li><span>git push -u origin master OR git push --set-upstream origin master</span></li>
+
+    <h6>When there are some earlier commits</h6>
+    <li><span>git remote add origin <https: //github.com/your/repository></span></li>
+    
+    <li><span>git pull origin master --allow-unrelated-histories</span></li>
+    
+    <li><span>git push -u origin master OR git push --set-upstream origin master</span></li>
+
+    <h6>Cloning a repository in your local workspace</h6>
+
+    <li><span>git clone <Repository URL></span></li>
+    <h6>Create repository local and pushing into repository later</h6>
+    <li><span>Create a directory (mostly by repository name)</span></li>
+    
+    <li><span>Navigate to the directory</span></li>
+    
+    <li><span>git init</span></li>
+    
+    <li><span>git add .</span></li>
+    
+    <li><span>git commit -m <Commit Message></span></li>
+
+    <h6>Now push to remote repository - Check push commands section.</h6>
+    <h6>Git log</h6>
+    <li><span>git log</span></li>
+
+    <h6>Log with one line description</h6>
+    <li><span>git log --oneline</span></li>
+    
+    <li><span>Last n logs</span></li>
+    
+    <li><span>git log -n</span></li>
+
+    <h6>Merge [ Merges changes from mention branch to the current branch]</h6>
+    <li><span>git merge <Branch Name></span></li>
+    
+    <li><span>git push // Not tested</span></li>
+    
+    <li><span>OR</span></li>
+    
+    <li><span>git checkout <Current Branch></span></li>
+    
+    <li><span>git pull origin <From Branch></span></li>
+    
+    <li><span>git push</span></li>
+
+    <h6>Portfolio/Syntax for GitHub Docs [Readme.md]</h6>
+    <a
+        href="https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">
+        https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+    </a>
+
+    See image can also be inserted
+
+
+    <h6>Cherry pick - Picking any specific commit from other branch and pull same changes in your branch (committed /added)</h6>
+
+    <h6>Pick commit hash from other branch and use in your branch to get all the changes from other branch to this branch, it will be committed into your branch as well.</h6>
+    <li><span>git cherry-pick <commitHash></span></li>
+    
+    <h6>Same as above but will not commit, you can change and provide a custom commit message and commit again</h6>
+    <li><span>git cherry-pick <commitHash> -n</span></li>
+
+    <h6>Fetch branch(es) from remote repository to your local - Syncs all the branches from remote to your local. (Branch which is created by other developer or in other workspace)</h6>
+    <li><span>git fetch origin</span></li>
+
+    <h6>Fetch any specific branch</h6>
+    <li><span>git fetch origin <branchName></span></li>
+
+    <h6>Cherry-pick: pulling any specific commit from other branch to your branch. Pick changes and commit into current branch</h6>
+    <li><span>git cherry-pick <commit Hash></span></li>
+
+    <h6>Pick changes and don't commit automatically, Now make your changes and commit.</h6>
+    <li><span>git cherry-pick <commit Hash> -n</span></li>
+
+    <h6>Git Add/Remove - Add all the files in present directory and its sub-directories</h6>
+    <li><span>git add .</span></li>
+
+    <h6>Add all the files in present directory, its sub directories and also from parent directories</h6>
+    <li><span>git add -A</span></li>
+
+    <h6>Add a specific file(s) or directory</h6>
+    <li><span>git add <file1 With Path> <file2 With Path></span></li>
+
+    <h6>Remove added file(s) / Unstage multiple files</h6>
+    <li><span>git rm --cached <File Name 1> <File Name 2> </span></li>
+
+    <h6>To unstage multiple files recursively</h6>
+    <li><span>git rm -r --cached <Directory Name> /.</span></li>
+
+    <h6>Convert a added file to non added file [stage to unstage]</h6>
+    <li><span>git restore --staged <file Name></span></li>
+
+    <h6>Now if you want to remove changes from unstage</h6>
+    <li><span>git restore <file Name></span></li>
+
+    <h6>Git Commit : Committing added files to local repository - Commit all added files</h6>
+    <li><span>git commit -m "Message"</span></li>
+
+    <h6>Update commit message - Will update last commit message.</h6>
+    <li><span>git commit --amend -m "New Message"</span></li>
+    
+    <h6>Add new changes into previous commit</h6>
+    <li><span>git commit --amend</span></li>
+
+    <h6>Display all files which are committed in this.</h6>
+    <li><span>git show <Commit hash></span></li>
+
+    <h6>Remove last commit</h6>
+    <li><span>git reset --hard HEAD^</span></li>
+
+    <h6>Push above deleted commit into remote repository</h6>
+    <li><span>git push -f</span></li>
+    <li><span>OR</span></li>
+    <li><span>git push --force</span></li>
+
+    <h6>After reset changes will be present in working directory</h6>
+    <li><span>git reset --soft <Commit Hash></span></li>
+
+    <h6>References:Delete Branch </h6>
+
+    <h6>Delete a branch Deletes from Remote Server</h6>
+    <li><span>git push -d <remote_name> <branchname></span></li>
+    <li><span>remote name mostly will be origin</span></li>
+
+    <h6>Deletes from Local machine</h6>
+    <li><span>git branch -d <Branch Name></span></li>
+
+    <h6>If deleted a branch in remote server via browser then you need to delete in local as well</h6>
+    <li><span>git branch -d <Deleted Branch> </Deleted></span></li>
+
+    <h6>Other Commands To see last commits which are not yet pushed to remote repository</h6>
+    <li><span>git cherry -v</span></li>
+    <h6>To see difference against last commit</h6>
+    <li><span>git diff</span></li>
+    <h6>Git rebase ??</h6>
+    <h6>Git fork ??</h6>
+
+    <h6>References:</h6>
+    <h6> Book - Download</h6>
+    <a href="https://progit2.s3.amazonaws.com/en/2016-03-22-f3531/progit-en.1084.pdf">
+        https://progit2.s3.amazonaws.com/en/2016-03-22-f3531/progit-en.1084.pdf
+    </a>
+    <br/>
+    <br/>
+    <br/>
+</body>
+
+</html>
