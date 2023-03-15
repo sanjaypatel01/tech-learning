@@ -1,0 +1,157 @@
+<html>
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="https://tech-learning-xi.vercel.app">Tech Learning</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link disabled"
+                href="#"
+                tabindex="-1"
+                aria-disabled="true"
+                >Disabled</a
+              >
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <span style="display: flex; justify-content: center;"><h4>Ducth National Flag Problem</h4></span>
+    
+    <br/>
+    <h6>Problem - Sort an array which contains 0, 1 and 2.</h6>
+
+    <h6>Solution :</h6>
+    <h6>Approaches --</h6>
+    <ol>
+      <li><b>Sort using merge Sort </b></li>
+    <pre> 
+    Time complexity - O(n log n)
+    Space Complexity - O (n)</pre>
+    <li><b>Use 3 variables to have count of 0s, 1s and 2s. Later update the array as per count.</b></li>
+    <pre>
+    Time Complexity - O(2 n) ~~ O(n) - Works in two loops
+    Space Complexity - O(1) - Constant space or no extra space
+    </pre>
+    <li><b>Optimal Approach  - Ducth National Flag Algorithm</b> </li>
+    <pre>
+    Time complexity - O(n)  - Works exactly in one loop
+    Space Complexity - O(1) - Constant space or no extra space
+
+    Consider having 3 pointers
+    low, mid and high
+    elements from 0 to low - 1 indices will be having 0.
+    elements from low to mid - 1 indices will be having 1.
+    elements from mid to high - 1 indices, consider unknown - This will be at the beginning. So basically whole array, as mid will be 0, and high will be n-1
+    elements from high to n - 1 indices will be having 2.
+
+    Now iterate array using mid which is 0 initially iterate until it is lesser to high
+    Now using switch
+    case 0: swap (Array[mid], Array[low]); low++, mid++; // Here low will be at 1 or low and mid both at same index.
+    case 1: mid++;
+    case 2: swap(Array[mid], Array[high]); high--; // No need to do mid++, as the element as position high, not sure what value it is containing 0, 1 or 2.
+    </pre>
+    </ol>
+
+    <code>
+      <pre>
+      import java.util.* ;
+      import java.io.*; 
+      public class Solution {
+        public static void sortArray(ArrayList<Integer> arr, int n) {
+          
+          int low = 0;
+          int mid = 0;
+          int high = n-1;
+
+          while(mid <= high) { // Here operator must be <=
+              switch(arr.get(mid)) {
+                  case 0:
+                      swap(arr, low, mid);
+                      low++;
+                      mid++;
+                      break;
+                  case 1:
+                      mid++;
+                      break;
+                  case 2:
+                      swap(arr, mid, high);
+                      high--;
+                      break;
+              }
+          }
+        }
+        private static void swap(ArrayList<Integer> arr, int index1, int index2) {
+          int temp = arr.get(index1);
+          arr.set(index1, arr.get(index2));
+          arr.set(index2, temp);
+        } 
+      }
+
+      </pre>
+    </code>
+
+    <h6>Practice Links</h6>
+    <ol>
+      <li><a href="https://www.codingninjas.com/codestudio/problems/sort-an-array-of-0s-1s-and-2s_892977">Coding Ninja - Dutch National Flag</a></li>
+    </ol>
+    </body>
+</html>
